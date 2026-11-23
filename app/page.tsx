@@ -37,7 +37,7 @@ export default function Home() {
           {/* SHPORTA SI NE FOTO - VETEM SFONDI PAK ME I HAPUR */}
           <div style={{ maxWidth: "1150px", margin: "14px auto 0", borderRadius: "24px", overflow: "hidden", position: "relative", minHeight: "420px", backgroundImage: "url('/hero.png.jpeg')", backgroundSize: "cover", backgroundPosition: "center", display: "flex", alignItems: "center" }}>
             
-<div style={{ position: "absolute", inset: 0, background: "linear-gradient(to right, rgba(38,77,58,1) 0%, rgba(38,77,58,0.95) 35%, rgba(95,125,105,0.55) 55%, rgba(168,191,168,0.35) 75%, rgba(168,191,168,0.15) 100%)" }}></div>
+<div style={{ position: "absolute", inset: 0, background: "linear-gradient(to right, rgba(38,77,58,1) 0%, rgba(38,77,58,0.95) 35%, rgba(95,125,105,0.55) 55%, rgba(168,191,168,0.35) 75%, rgba(168,191,168,0.15) 100%)" }}>
               <h1 style={{ fontSize: "44px", lineHeight: "1.1", margin: "0 0 14px", fontWeight: "900", textShadow: "0 2px 10px rgba(0,0,0,0.2)" }}>Shkëmbe,<br/>Mos Shpenzo<br/><span style={{ fontSize: "24px", fontWeight: "400", opacity: 0.95 }}>Mirësevjen te DHURO</span></h1>
               <p style={{ fontSize: "14px", lineHeight: "1.7", color: "#FFFFFF", maxWidth: "420px", margin: "0 0 22px" }}>Një platformë komuniteti ku gjërat e papërdorura gjejnë shtëpi të re. Jep pak, merr atë që të duhet - pa para në mes.</p>
               <div style={{ display: "flex", gap: "10px", flexWrap: "wrap" }}>
