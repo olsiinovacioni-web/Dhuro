@@ -9,103 +9,69 @@ export default function Home() {
     { title: "Kuti Çokollatash", tag: "Free to Borrow", img: "🍫", user: "Sara • Bllok", time: "15 min më parë" },
     { title: "Buqetë për Gjyshen", tag: "Free to Borrow", img: "🌷", user: "Erioni • Kombinat", time: "30 min më parë" },
     { title: "Libër + Lule", tag: "Free to Borrow", img: "📚", user: "Doni • Kamëz", time: "1 orë më parë" },
+    { title: "Lule për Spitalin", tag: "Free to Borrow", img: "🌻", user: "Komuniteti • QSUT", time: "2 orë më parë" },
+    { title: "Buqetë Ditëlindje", tag: "Free to Borrow", img: "🎂", user: "Mira • Elbasan", time: "3 orë më parë" },
   ];
   return (
-    <div style={{ fontFamily: "Georgia, 'Times New Roman', serif", background: "#FFFFFF", minHeight: "100vh", color: "#1A1A1A", margin: 0 }}>
-      {/* BANNER LART - si te foto */}
-      <div style={{ background: "#78927D", color: "white", textAlign: "center", padding: "10px 15px", fontSize: "13.5px", fontFamily: "Arial, sans-serif", display: "flex", justifyContent: "center", alignItems: "center", gap: "12px" }}>
-        <span>Dhuro me dashuri! Mos e hidh, dhuroje! 💐</span>
-        <span style={{ background: "white", color: "#244B38", padding: "5px 14px", borderRadius: "20px", fontWeight: "bold", fontSize: "12px", cursor: "pointer" }}>Learn more</span>
-      </div>
-
-      {/* HEADER - IDENTIK ME FOTON */}
-      <header style={{ display: "flex", justifyContent: "space-between", alignItems: "center", maxWidth: "1200px", margin: "0 auto", padding: "16px 20px", fontFamily: "Arial, sans-serif" }}>
-        <b onClick={() => setPage("home")} style={{ cursor: "pointer", fontSize: "16px", fontWeight: "bold", display: "flex", alignItems: "center", gap: "6px" }}><span style={{ fontSize: "20px" }}>♾️</span> DHURO</b>
-        <div style={{ display: "flex", gap: "24px", fontSize: "13.5px", color: "#333", alignItems: "center" }}>
-          <span onClick={() => setPage("dhuro")} style={{ cursor: "pointer" }}>Get Started ⌄</span>
+    <div style={{ fontFamily: "Manrope, Arial, sans-serif", background: "#E9E9DC", minHeight: "100vh", color: "#244B38", padding: "12px" }}>
+      <header style={{ display: "flex", justifyContent: "space-between", alignItems: "center", maxWidth: "1150px", margin: "0 auto", background: "#FFFFFF", padding: "12px 22px", borderRadius: "30px", gap: "10px", flexWrap: "wrap" }}>
+        <b onClick={() => setPage("home")} style={{ cursor: "pointer", fontSize: "19px", color: "#244B38" }}>DHURO</b>
+        <div style={{ display: "flex", gap: "18px", fontSize: "13px", color: "#666" }}>
+          <span onClick={() => setPage("home")} style={{ cursor: "pointer", color: "#244B38", fontWeight: "bold" }}>Home</span>
+          <span onClick={() => setPage("dhuro")} style={{ cursor: "pointer" }}>Dhuro</span>
           <span onClick={() => setPage("humanitare")} style={{ cursor: "pointer" }}>Humanitare</span>
           <span onClick={() => setPage("kerko")} style={{ cursor: "pointer" }}>Kërko</span>
-          <span onClick={() => setPage("help")} style={{ cursor: "pointer" }}>Help Center</span>
         </div>
-        <div style={{ display: "flex", gap: "12px", alignItems: "center", fontSize: "13.5px" }}>
-          <span style={{ cursor: "pointer", fontSize: "18px" }}>🔍</span>
-          <span onClick={() => setPage("login")} style={{ cursor: "pointer", color: "#333" }}>Log in</span>
-          <button onClick={() => setPage("signup")} style={{ background: "#78927D", color: "white", border: "none", padding: "8px 16px", borderRadius: "20px", cursor: "pointer", fontSize: "13px", fontWeight: "bold" }}>Sign up</button>
+        <div style={{ display: "flex", gap: "8px", alignItems: "center" }}>
+          <div style={{ display: "flex", alignItems: "center", background: "#F5F5F0", borderRadius: "30px", padding: "6px 10px", gap: "6px" }}>
+            <span>🔍</span>
+            <input value={search} onChange={(e) => setSearch(e.target.value)} placeholder="Kërko..." style={{ border: "none", background: "transparent", outline: "none", width: "80px", fontSize: "13px" }} />
+          </div>
+          <button onClick={() => setPage("login")} style={{ background: "white", color: "#244B38", border: "1px solid #244B38", padding: "8px 16px", borderRadius: "30px", cursor: "pointer", fontSize: "13px", fontWeight: "bold" }}>Log In</button>
+          <button onClick={() => setPage("signup")} style={{ background: "#78927D", color: "white", border: "none", padding: "8px 16px", borderRadius: "30px", cursor: "pointer", fontSize: "13px", fontWeight: "bold" }}>Sign Up</button>
         </div>
       </header>
 
       {page === "home" && (
         <>
-          {/* HERO - IDENTIK ME FOTON */}
-          <div style={{ maxWidth: "1200px", margin: "0 auto", display: "flex", gap: "20px", padding: "20px 20px 40px", flexWrap: "wrap", alignItems: "center", position: "relative", overflow: "hidden" }}>
-            {/* Majtas */}
-            <div style={{ flex: 1, minWidth: "320px", zIndex: 2 }}>
-              <h1 style={{ fontSize: "64px", lineHeight: "1.05", margin: "0 0 18px", fontWeight: "400", letterSpacing: "-1px" }}>Welcome to<br/>the<br/>DHURO<br/>Project</h1>
-              <p style={{ fontSize: "15px", lineHeight: "1.6", color: "#333", maxWidth: "340px", margin: "0 0 24px", fontFamily: "Arial, sans-serif" }}>Join our community for giving and getting stuff, completely for free.</p>
-              <div style={{ display: "flex", gap: "10px", fontFamily: "Arial, sans-serif" }}>
-                <button onClick={() => setPage("signup")} style={{ background: "#78927D", color: "white", border: "none", padding: "12px 22px", borderRadius: "30px", cursor: "pointer", fontWeight: "bold", fontSize: "14px" }}>Sign up</button>
-                <button onClick={() => setPage("dhuro")} style={{ background: "white", color: "#244B38", border: "1.5px solid #244B38", padding: "12px 22px", borderRadius: "30px", cursor: "pointer", fontWeight: "bold", fontSize: "14px" }}>Download the app</button>
-              </div>
-            </div>
-
-            {/* Djathtas - FOTO + SFOND JESHIL NATYRAL */}
-            <div style={{ flex: 1.2, minWidth: "320px", position: "relative", height: "480px" }}>
-              <div style={{ position: "absolute", right: "-40px", top: "-20px", width: "100%", height: "100%", background: "#78927D", borderRadius: "50% 0 0 50%", opacity: 0.95 }}></div>
-              {/* Foto 1 - Biçikletë / Buqetë */}
-              <div style={{ position: "absolute", top: "10px", right: "10px", width: "260px", background: "white", borderRadius: "12px", overflow: "hidden", boxShadow: "0 10px 30px rgba(0,0,0,0.15)" }}>
-                <div style={{ height: "150px", backgroundImage: "url('/hero.png.jpeg')", backgroundSize: "cover", backgroundPosition: "center", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "50px" }}>💐</div>
-              </div>
-              <div style={{ position: "absolute", top: "50px", left: "10px", background: "white", padding: "10px 14px", borderRadius: "12px", display: "flex", alignItems: "center", gap: "10px", boxShadow: "0 8px 20px rgba(0,0,0,0.12)", zIndex: 3 }}>
-                <div style={{ width: "36px", height: "36px", borderRadius: "50%", background: "#E9E9DC", display: "flex", alignItems: "center", justifyContent: "center" }}>👩</div>
-                <div><div style={{ fontSize: "13px", fontWeight: "bold", fontFamily: "Arial" }}>Ana</div><div style={{ fontSize: "11px", color: "#666", fontFamily: "Arial" }}>Tirana, AL</div></div>
-              </div>
-              {/* Foto 2 */}
-              <div style={{ position: "absolute", bottom: "70px", left: "40px", width: "300px", background: "white", borderRadius: "12px", overflow: "hidden", boxShadow: "0 10px 30px rgba(0,0,0,0.15)" }}>
-                <div style={{ height: "170px", background: "#E9E9DC", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "60px" }}>🌷🌻🌹</div>
-              </div>
-              <div style={{ position: "absolute", bottom: "110px", left: "10px", background: "white", padding: "10px 14px", borderRadius: "12px", display: "flex", alignItems: "center", gap: "10px", boxShadow: "0 8px 20px rgba(0,0,0,0.12)", zIndex: 3 }}>
-                <div style={{ width: "36px", height: "36px", borderRadius: "50%", background: "#FFE5D0", display: "flex", alignItems: "center", justifyContent: "center" }}>👩‍🦰</div>
-                <div><div style={{ fontSize: "13px", fontWeight: "bold", fontFamily: "Arial" }}>Sara ✅</div><div style={{ fontSize: "11px", color: "#666", fontFamily: "Arial" }}>Bllok, Tirana</div></div>
-              </div>
-              {/* Foto 3 */}
-              <div style={{ position: "absolute", bottom: "0", right: "0", width: "180px", background: "white", borderRadius: "12px", overflow: "hidden", boxShadow: "0 10px 30px rgba(0,0,0,0.15)" }}>
-                <div style={{ height: "110px", background: "#D07A4A", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "50px" }}>🪴</div>
+          <div style={{ maxWidth: "1150px", margin: "14px auto 0", borderRadius: "24px", overflow: "hidden", position: "relative", minHeight: "420px", backgroundImage: "url('/hero.png.jpeg')", backgroundSize: "cover", backgroundPosition: "center", display: "flex", alignItems: "center" }}>
+            <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to right, rgba(0,0,0,0.45) 0%, rgba(0,0,0,0.15) 45%, rgba(0,0,0,0) 70%)" }}></div>
+            <div style={{ position: "relative", padding: "40px 35px", color: "white", maxWidth: "500px" }}>
+              <h1 style={{ fontSize: "44px", lineHeight: "1.1", margin: "0 0 14px", fontWeight: "900" }}>Shkëmbe,<br/>Mos Shpenzo<br/><span style={{ fontSize: "24px", fontWeight: "400", opacity: 0.95 }}>Mirësevjen te DHURO</span></h1>
+              <p style={{ fontSize: "14px", lineHeight: "1.7", color: "#E9E9DC", maxWidth: "420px", margin: "0 0 22px" }}>Një platformë komuniteti ku gjërat e papërdorura gjejnë shtëpi të re. Jep pak, merr atë që të duhet - pa para në mes.</p>
+              <div style={{ display: "flex", gap: "10px", flexWrap: "wrap" }}>
+                <button onClick={() => setPage("dhuro")} style={{ background: "#E9E9DC", color: "#244B38", border: "none", padding: "12px 22px", borderRadius: "30px", cursor: "pointer", fontWeight: "bold", fontSize: "14px" }}>Start Exchanging</button>
+                <button onClick={() => setPage("kerko")} style={{ background: "transparent", color: "white", border: "1px solid white", padding: "12px 22px", borderRadius: "30px", cursor: "pointer", fontWeight: "bold", fontSize: "14px" }}>Browse Items</button>
               </div>
             </div>
           </div>
 
-          {/* SEARCH + 4 OPSIONE + RECENTLY ADDED */}
-          <div style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 20px 40px", fontFamily: "Arial, sans-serif" }}>
-            <div style={{ display: "flex", gap: "10px", background: "#F5F5F0", padding: "12px", borderRadius: "30px", maxWidth: "600px", margin: "0 auto" }}>
-              <span style={{ padding: "8px 0 8px 12px" }}>🔍</span>
-              <input value={search} onChange={(e) => setSearch(e.target.value)} placeholder="Kërko buqetë, lule, dhuratë..." style={{ flex: 1, border: "none", background: "transparent", outline: "none", fontSize: "14px" }} />
-              <button onClick={() => setPage("kerko")} style={{ background: "#78927D", color: "white", border: "none", padding: "10px 20px", borderRadius: "20px", cursor: "pointer", fontWeight: "bold" }}>Kërko</button>
-            </div>
-            <div style={{ display: "flex", gap: "10px", justifyContent: "center", marginTop: "18px", flexWrap: "wrap" }}>
-              <button onClick={() => setPage("dhuro")} style={{ background: "#78927D", color: "white", border: "none", padding: "10px 18px", borderRadius: "20px", cursor: "pointer" }}>🤲 Helping Hands</button>
-              <button onClick={() => setPage("dhuro")} style={{ background: "#E9E9DC", color: "#244B38", border: "none", padding: "10px 18px", borderRadius: "20px", cursor: "pointer" }}>📅 Local Events</button>
-              <button onClick={() => setPage("kerko")} style={{ background: "#D07A4A", color: "white", border: "none", padding: "10px 18px", borderRadius: "20px", cursor: "pointer" }}>📍 Local Gems</button>
-              <button onClick={() => setPage("humanitare")} style={{ background: "white", color: "#244B38", border: "1px solid #78927D", padding: "10px 18px", borderRadius: "20px", cursor: "pointer" }}>💐 Dhuro Tani</button>
-            </div>
-            <h2 style={{ fontFamily: "Georgia, serif", fontSize: "26px", margin: "30px 0 16px" }}>Recently Added</h2>
-            <div style={{ display: "flex", gap: "14px", overflowX: "auto", paddingBottom: "10px" }}>
+          <div style={{ maxWidth: "1150px", margin: "20px auto 0", display: "flex", gap: "14px", flexWrap: "wrap" }}>
+            <div onClick={() => setPage("humanitare")} style={{ flex: 1, minWidth: "220px", background: "#FFFFFF", borderRadius: "16px", padding: "20px", cursor: "pointer" }}><span style={{ background: "#E9E9DC", padding: "8px", borderRadius: "10px" }}>🤲</span><h3 style={{ margin: "14px 0 5px", color: "#244B38" }}>Helping Hands</h3><p style={{ color: "#666", fontSize: "12.5px", margin: 0 }}>Offer a smile or request help from neighbors nearby.</p></div>
+            <div onClick={() => setPage("dhuro")} style={{ flex: 1, minWidth: "220px", background: "#78927D", color: "#E9E9DC", borderRadius: "16px", padding: "20px", cursor: "pointer" }}><span style={{ background: "rgba(233,233,220,0.3)", padding: "8px", borderRadius: "10px" }}>📅</span><h3 style={{ margin: "14px 0 5px", color: "#FFFFFF" }}>Local Events</h3><p style={{ color: "#E9E9DC", fontSize: "12.5px", margin: 0 }}>Block parties, ditëlindje, takime komuniteti.</p></div>
+            <div onClick={() => setPage("kerko")} style={{ flex: 1, minWidth: "220px", background: "#D07A4A", color: "white", borderRadius: "16px", padding: "20px", cursor: "pointer" }}><span style={{ background: "rgba(255,255,255,0.2)", padding: "8px", borderRadius: "10px" }}>📍</span><h3 style={{ margin: "14px 0 5px" }}>Local Gems</h3><p style={{ color: "#FFE5D0", fontSize: "12.5px", margin: 0 }}>Discover neighbors dhe njerëz të mirë në lagjen tënde.</p></div>
+          </div>
+
+          <div style={{ maxWidth: "1150px", margin: "30px auto", padding: "0 5px 20px" }}>
+            <h2 style={{ margin: "0 0 4px", fontSize: "24px", color: "#244B38" }}>Recently Added</h2>
+            <p style={{ color: "#78927D", margin: 0, fontSize: "13px" }}>Available to borrow in your area</p>
+            <div style={{ display: "flex", gap: "14px", marginTop: "16px", overflowX: "auto", paddingBottom: "10px" }}>
               {items.map((it, i) => (
-                <div key={i} style={{ minWidth: "240px", background: "#FFFFFF", borderRadius: "14px", overflow: "hidden", border: "1px solid #E9E9DC", flexShrink: 0 }}>
-                  <div style={{ background: "#E9E9DC", padding: "30px 0 20px", textAlign: "center" }}><div style={{ fontSize: "55px" }}>{it.img}</div></div>
-                  <div style={{ padding: "14px" }}><h4 style={{ margin: "0 0 4px", fontSize: "14px" }}>{it.title}</h4><p style={{ margin: "0 0 8px", fontSize: "12px", color: "#78927D" }}>{it.user} • {it.time}</p><button onClick={() => setPage("dhuro")} style={{ width: "100%", background: "#78927D", color: "white", border: "none", padding: "9px", borderRadius: "10px", cursor: "pointer", fontWeight: "bold" }}>Dhuro / Kërko →</button></div>
+                <div key={i} style={{ minWidth: "235px", background: "#FFFFFF", borderRadius: "14px", overflow: "hidden", border: "1px solid #E9E9DC", flexShrink: 0 }}>
+                  <div style={{ background: "#E9E9DC", padding: "30px 0 20px", textAlign: "center", position: "relative" }}><span style={{ position: "absolute", top: "10px", left: "10px", background: "white", fontSize: "11px", padding: "4px 8px", borderRadius: "20px", fontWeight: "bold", color: "#244B38" }}>{it.tag}</span><div style={{ fontSize: "55px" }}>{it.img}</div></div>
+                  <div style={{ padding: "14px" }}><h4 style={{ margin: "0 0 4px", fontSize: "14px", color: "#244B38" }}>{it.title}</h4><p style={{ margin: "0 0 8px", fontSize: "12px", color: "#78927D" }}>{it.user} • {it.time}</p><button onClick={() => setPage("dhuro")} style={{ width: "100%", background: "#78927D", color: "white", border: "none", padding: "9px", borderRadius: "10px", cursor: "pointer", fontWeight: "bold" }}>Dhuro / Kërko →</button></div>
                 </div>
               ))}
             </div>
           </div>
         </>
       )}
-      {page === "dhuro" && (<div style={{ textAlign: "center", padding: "60px 20px", background: "#F5F5F0", borderRadius: "20px", maxWidth: "1000px", margin: "20px auto", fontFamily: "Arial" }}><h2>Dhuro 💐</h2><p>Zgjidh një buqetë, na shkruaj, ne e çojmë me dashuri.</p></div>)}
-      {page === "kerko" && (<div style={{ textAlign: "center", padding: "60px 20px", background: "#F5F5F0", borderRadius: "20px", maxWidth: "1000px", margin: "20px auto", fontFamily: "Arial" }}><h2>Kërko 🔍</h2><p>Na thuaj çfarë kërkon - komuniteti të ndihmon.</p></div>)}
-      {page === "humanitare" && (<div style={{ textAlign: "center", padding: "60px 20px", background: "#F5F5F0", borderRadius: "20px", maxWidth: "1000px", margin: "20px auto", fontFamily: "Arial" }}><h2>Helping Hands 🤲</h2><p>Për një gjyshe të vetmuar, një fëmijë në spital.</p></div>)}
-      {page === "help" && (<div style={{ textAlign: "center", padding: "60px 20px", background: "#F5F5F0", borderRadius: "20px", maxWidth: "1000px", margin: "20px auto", fontFamily: "Arial" }}><h2>Help Center ❓</h2><p>Si funksionon DHURO? Pyet këtu.</p></div>)}
-      {page === "login" && (<div style={{ textAlign: "center", padding: "50px 20px", background: "#FFFFFF", borderRadius: "20px", maxWidth: "450px", margin: "30px auto", fontFamily: "Arial", border: "1px solid #E9E9DC" }}><h2>Mirësevjen përsëri! 👋</h2><input placeholder="Email" style={{ width: "100%", padding: "12px", borderRadius: "12px", border: "1px solid #E9E9DC", marginTop: "20px", boxSizing: "border-box" }} /><input type="password" placeholder="Fjalëkalimi" style={{ width: "100%", padding: "12px", borderRadius: "12px", border: "1px solid #E9E9DC", marginTop: "10px", boxSizing: "border-box" }} /><button onClick={() => setPage("home")} style={{ width: "100%", background: "#78927D", color: "white", border: "none", padding: "13px", borderRadius: "12px", marginTop: "15px", cursor: "pointer", fontWeight: "bold" }}>Log In</button></div>)}
-      {page === "signup" && (<div style={{ textAlign: "center", padding: "50px 20px", background: "#FFFFFF", borderRadius: "20px", maxWidth: "450px", margin: "30px auto", fontFamily: "Arial", border: "1px solid #E9E9DC" }}><h2>Krijo llogari ✨</h2><input placeholder="Emri" style={{ width: "100%", padding: "12px", borderRadius: "12px", border: "1px solid #E9E9DC", marginTop: "20px", boxSizing: "border-box" }} /><input placeholder="Email" style={{ width: "100%", padding: "12px", borderRadius: "12px", border: "1px solid #E9E9DC", marginTop: "10px", boxSizing: "border-box" }} /><input type="password" placeholder="Fjalëkalimi" style={{ width: "100%", padding: "12px", borderRadius: "12px", border: "1px solid #E9E9DC", marginTop: "10px", boxSizing: "border-box" }} /><button onClick={() => setPage("home")} style={{ width: "100%", background: "#78927D", color: "white", border: "none", padding: "13px", borderRadius: "12px", marginTop: "15px", cursor: "pointer", fontWeight: "bold" }}>Sign Up</button></div>)}
-      <footer style={{ textAlign: "center", padding: "20px", color: "#78927D", fontSize: "12px", fontFamily: "Arial" }}>© 2026 DHURO</footer>
+      {page === "dhuro" && (<div style={{ textAlign: "center", padding: "60px 20px", background: "#FFFFFF", borderRadius: "20px", maxWidth: "1150px", margin: "14px auto" }}><h2 style={{ color: "#244B38" }}>Dhuro 💐</h2><p>Zgjidh një buqetë, na shkruaj, ne e çojmë me dashuri.</p></div>)}
+      {page === "kerko" && (<div style={{ textAlign: "center", padding: "60px 20px", background: "#FFFFFF", borderRadius: "20px", maxWidth: "1150px", margin: "14px auto" }}><h2 style={{ color: "#244B38" }}>Kërko 🔍</h2><p>Na thuaj çfarë kërkon - komuniteti të ndihmon.</p></div>)}
+      {page === "humanitare" && (<div style={{ textAlign: "center", padding: "60px 20px", background: "#FFFFFF", borderRadius: "20px", maxWidth: "1150px", margin: "14px auto" }}><h2 style={{ color: "#244B38" }}>Helping Hands 🤲</h2><p>Për një gjyshe të vetmuar, një fëmijë në spital, një familje në nevojë.</p></div>)}
+      {page === "login" && (<div style={{ textAlign: "center", padding: "50px 20px", background: "#FFFFFF", borderRadius: "20px", maxWidth: "450px", margin: "30px auto" }}><h2 style={{ color: "#244B38" }}>Mirësevjen përsëri! 👋</h2><input placeholder="Email" style={{ width: "100%", padding: "12px", borderRadius: "12px", border: "1px solid #E9E9DC", marginTop: "20px", boxSizing: "border-box" }} /><input type="password" placeholder="Fjalëkalimi" style={{ width: "100%", padding: "12px", borderRadius: "12px", border: "1px solid #E9E9DC", marginTop: "10px", boxSizing: "border-box" }} /><button onClick={() => setPage("home")} style={{ width: "100%", background: "#78927D", color: "white", border: "none", padding: "13px", borderRadius: "12px", marginTop: "15px", cursor: "pointer", fontWeight: "bold" }}>Log In</button></div>)}
+      {page === "signup" && (<div style={{ textAlign: "center", padding: "50px 20px", background: "#FFFFFF", borderRadius: "20px", maxWidth: "450px", margin: "30px auto" }}><h2 style={{ color: "#244B38" }}>Krijo llogari ✨</h2><input placeholder="Emri" style={{ width: "100%", padding: "12px", borderRadius: "12px", border: "1px solid #E9E9DC", marginTop: "20px", boxSizing: "border-box" }} /><input placeholder="Email" style={{ width: "100%", padding: "12px", borderRadius: "12px", border: "1px solid #E9E9DC", marginTop: "10px", boxSizing: "border-box" }} /><input type="password" placeholder="Fjalëkalimi" style={{ width: "100%", padding: "12px", borderRadius: "12px", border: "1px solid #E9E9DC", marginTop: "10px", boxSizing: "border-box" }} /><button onClick={() => setPage("home")} style={{ width: "100%", background: "#78927D", color: "white", border: "none", padding: "13px", borderRadius: "12px", marginTop: "15px", cursor: "pointer", fontWeight: "bold" }}>Sign Up</button></div>)}
+      <footer style={{ textAlign: "center", padding: "20px", color: "#78927D", fontSize: "12px" }}>© 2026 DHURO</footer>
     </div>
   );
 }
