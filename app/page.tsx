@@ -36,7 +36,7 @@ export default function Home() {
         <>
           {/* SHPORTA SI NE FOTO - VETEM SFONDI PAK ME I HAPUR */}
           <div style={{ maxWidth: "1150px", margin: "14px auto 0", borderRadius: "24px", overflow: "hidden", position: "relative", minHeight: "420px", backgroundImage: "url('/hero.png.jpeg')", backgroundSize: "cover", backgroundPosition: "center", display: "flex", alignItems: "center" }}>
-            {/* Shtresa jeshile e hapur mbi foto, qe ta bej me te ndritshme */}
+            <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to right, rgba(36,75,56,0.96) 0%, rgba(80,110,85,0.78) 38%, rgba(168,191,168,0.25) 65%, rgba(168,191,168,0.02) 85%)" }}></div>
             <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to right, rgba(168,191,168,0.92) 0%, rgba(168,191,168,0.55) 45%, rgba(168,191,168,0.15) 70%)" }}></div>
             <div style={{ position: "relative", padding: "40px 35px", color: "white", maxWidth: "500px" }}>
               <h1 style={{ fontSize: "44px", lineHeight: "1.1", margin: "0 0 14px", fontWeight: "900", textShadow: "0 2px 10px rgba(0,0,0,0.2)" }}>Shkëmbe,<br/>Mos Shpenzo<br/><span style={{ fontSize: "24px", fontWeight: "400", opacity: 0.95 }}>Mirësevjen te DHURO</span></h1>
