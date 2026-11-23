@@ -20,12 +20,16 @@ export default function Home() {
         </div>
 
         <div style={{ background: 'white', padding: '30px', borderRadius: '20px', width: '250px', boxShadow: '0 10px 30px rgba(0,0,0,0.1)' }}>
-          <div style={{ fontSize: '50px' }}>🧸</
+          <div style={{ fontSize: '50px' }}>🎁</div>
+        <h2>Dhurata</h2>
+        <p>20,000 Lekë</p>
+        <button style={{ background: '#ff5a5a', color: 'white', border: 'none', padding: '12px 20px', borderRadius: '10px', fontSize: '16px' }}>Porosit</button>
       </div>
-        </div>
-      </div>
-    );
+    </div>
+  </div>
+);
 }
+
 
       
 
