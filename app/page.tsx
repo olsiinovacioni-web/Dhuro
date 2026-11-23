@@ -20,7 +20,14 @@ export default function Home() {
         </div>
 
         <div style={{ background: 'white', padding: '30px', borderRadius: '20px', width: '250px', boxShadow: '0 10px 30px rgba(0,0,0,0.1)' }}>
-          <div style={{ fontSize: '50px' }}>🧸</ 
+          <div style={{ fontSize: '50px' }}>🧸</
+      </div>
+        </div>
+      </div>
+    );
+}
+
+      
 
 
           
