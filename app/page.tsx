@@ -31,8 +31,7 @@ export default function Home() {
           style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%", objectFit: "cover" }}
         />
         {/* HIJA E GJELBER SIPER FOTOS PER TE LEXUAR SHKRIMI */}
-        <div style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%", background: "linear-gradient(to right, rgba(20,40,28,0.88) 0%, rgba(20,40,28,0.55) 45%, rgba(20,40,28,0.10) 75%)" }}></div>
-
+        <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to right, rgba(120,146,125,0.45) 0%, rgba(120,146,125,0.30) 50%, rgba(120,146,125,0.15) 100%)" }}></div>
         <div style={{ position: "relative", zIndex: 2, height: "100%", display: "flex", flexDirection: "column", justifyContent: "center", padding: "0 24px", maxWidth: "900px" }}>
           <h1 style={{ fontSize: "44px", lineHeight: "1.1", fontWeight: "900", color: "white", margin: "0 0 14px", maxWidth: "520px" }}>
             Mirësevini te DHURO
