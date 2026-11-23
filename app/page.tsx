@@ -34,24 +34,23 @@ export default function Home() {
 
       {page === "home" && (
         <>
-          {/* NGJYRA + SHPORTA BASHKE */}
-          <div style={{ maxWidth: "1150px", margin: "14px auto 0", borderRadius: "24px", overflow: "hidden", minHeight: "420px", background: "#78927D", display: "flex" }}>
-            {/* MAJTAS - TEKSTI MBI JESHILE NATYRALE */}
-            <div style={{ flex: 1, padding: "40px 35px", color: "white", display: "flex", flexDirection: "column", justifyContent: "center", minWidth: "280px" }}>
-              <h1 style={{ fontSize: "44px", lineHeight: "1.1", margin: "0 0 14px", fontWeight: "900" }}>Shkëmbe,<br/>Mos Shpenzo<br/><span style={{ fontSize: "24px", fontWeight: "400", opacity: 0.95 }}>Mirësevjen te DHURO</span></h1>
-              <p style={{ fontSize: "14px", lineHeight: "1.7", color: "#E9E9DC", maxWidth: "420px", margin: "0 0 22px" }}>Një platformë komuniteti ku gjërat e papërdorura gjejnë shtëpi të re. Jep pak, merr atë që të duhet - pa para në mes.</p>
+          {/* SHPORTA SI NE FOTO - VETEM SFONDI PAK ME I HAPUR */}
+          <div style={{ maxWidth: "1150px", margin: "14px auto 0", borderRadius: "24px", overflow: "hidden", position: "relative", minHeight: "420px", backgroundImage: "url('/hero.png.jpeg')", backgroundSize: "cover", backgroundPosition: "center", display: "flex", alignItems: "center" }}>
+            {/* Shtresa jeshile e hapur mbi foto, qe ta bej me te ndritshme */}
+            <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to right, rgba(168,191,168,0.92) 0%, rgba(168,191,168,0.55) 45%, rgba(168,191,168,0.15) 70%)" }}></div>
+            <div style={{ position: "relative", padding: "40px 35px", color: "white", maxWidth: "500px" }}>
+              <h1 style={{ fontSize: "44px", lineHeight: "1.1", margin: "0 0 14px", fontWeight: "900", textShadow: "0 2px 10px rgba(0,0,0,0.2)" }}>Shkëmbe,<br/>Mos Shpenzo<br/><span style={{ fontSize: "24px", fontWeight: "400", opacity: 0.95 }}>Mirësevjen te DHURO</span></h1>
+              <p style={{ fontSize: "14px", lineHeight: "1.7", color: "#FFFFFF", maxWidth: "420px", margin: "0 0 22px" }}>Një platformë komuniteti ku gjërat e papërdorura gjejnë shtëpi të re. Jep pak, merr atë që të duhet - pa para në mes.</p>
               <div style={{ display: "flex", gap: "10px", flexWrap: "wrap" }}>
                 <button onClick={() => setPage("dhuro")} style={{ background: "#E9E9DC", color: "#244B38", border: "none", padding: "12px 22px", borderRadius: "30px", cursor: "pointer", fontWeight: "bold", fontSize: "14px" }}>Start Exchanging</button>
                 <button onClick={() => setPage("kerko")} style={{ background: "transparent", color: "white", border: "1px solid white", padding: "12px 22px", borderRadius: "30px", cursor: "pointer", fontWeight: "bold", fontSize: "14px" }}>Browse Items</button>
               </div>
             </div>
-            {/* DJATHTAS - SHPORTA */}
-            <div style={{ flex: 1, minWidth: "280px", backgroundImage: "url('/hero.png.jpeg')", backgroundSize: "cover", backgroundPosition: "center" }}></div>
           </div>
 
           <div style={{ maxWidth: "1150px", margin: "20px auto 0", display: "flex", gap: "14px", flexWrap: "wrap" }}>
             <div onClick={() => setPage("humanitare")} style={{ flex: 1, minWidth: "220px", background: "#FFFFFF", borderRadius: "16px", padding: "20px", cursor: "pointer" }}><span style={{ background: "#E9E9DC", padding: "8px", borderRadius: "10px" }}>🤲</span><h3 style={{ margin: "14px 0 5px", color: "#244B38" }}>Helping Hands</h3><p style={{ color: "#666", fontSize: "12.5px", margin: 0 }}>Offer a smile or request help from neighbors nearby.</p></div>
-            <div onClick={() => setPage("dhuro")} style={{ flex: 1, minWidth: "220px", background: "#78927D", color: "#E9E9DC", borderRadius: "16px", padding: "20px", cursor: "pointer" }}><span style={{ background: "rgba(233,233,220,0.3)", padding: "8px", borderRadius: "10px" }}>📅</span><h3 style={{ margin: "14px 0 5px", color: "#FFFFFF" }}>Local Events</h3><p style={{ color: "#E9E9DC", fontSize: "12.5px", margin: 0 }}>Block parties, ditëlindje, takime komuniteti.</p></div>
+            <div onClick={() => setPage("dhuro")} style={{ flex: 1, minWidth: "220px", background: "#A8BFA8", color: "#FFFFFF", borderRadius: "16px", padding: "20px", cursor: "pointer" }}><span style={{ background: "rgba(255,255,255,0.3)", padding: "8px", borderRadius: "10px" }}>📅</span><h3 style={{ margin: "14px 0 5px", color: "#FFFFFF" }}>Local Events</h3><p style={{ color: "#FFFFFF", fontSize: "12.5px", margin: 0 }}>Block parties, ditëlindje, takime komuniteti.</p></div>
             <div onClick={() => setPage("kerko")} style={{ flex: 1, minWidth: "220px", background: "#D07A4A", color: "white", borderRadius: "16px", padding: "20px", cursor: "pointer" }}><span style={{ background: "rgba(255,255,255,0.2)", padding: "8px", borderRadius: "10px" }}>📍</span><h3 style={{ margin: "14px 0 5px" }}>Local Gems</h3><p style={{ color: "#FFE5D0", fontSize: "12.5px", margin: 0 }}>Discover neighbors dhe njerëz të mirë në lagjen tënde.</p></div>
           </div>
 
