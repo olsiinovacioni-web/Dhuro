@@ -34,9 +34,9 @@ export default function Home() {
 
       {page === "home" && (
         <>
-          <div style={{ maxWidth: "1150px", margin: "14px auto 0", borderRadius: "24px", overflow: "hidden", position: "relative", minHeight: "420px", backgroundImage: "url('/hero.png.jpeg')", backgroundSize: "cover", backgroundPosition: "center", display: "flex", alignItems: "center" }}>
-            <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to right, rgba(0,0,0,0.45) 0%, rgba(0,0,0,0.15) 45%, rgba(0,0,0,0) 70%)" }}></div>
-            <div style={{ position: "relative", padding: "40px 35px", color: "white", maxWidth: "500px" }}>
+          {/* SFONDI MBPRAPA - TANI JESHILE NATYRALE #78927D, JO FOTO */}
+          <div style={{ maxWidth: "1150px", margin: "14px auto 0", borderRadius: "24px", overflow: "hidden", position: "relative", minHeight: "420px", background: "#78927D", display: "flex", alignItems: "center" }}>
+            <div style={{ position: "relative", padding: "40px 35px", color: "white", maxWidth: "500px", zIndex: 2 }}>
               <h1 style={{ fontSize: "44px", lineHeight: "1.1", margin: "0 0 14px", fontWeight: "900" }}>Shkëmbe,<br/>Mos Shpenzo<br/><span style={{ fontSize: "24px", fontWeight: "400", opacity: 0.95 }}>Mirësevjen te DHURO</span></h1>
               <p style={{ fontSize: "14px", lineHeight: "1.7", color: "#E9E9DC", maxWidth: "420px", margin: "0 0 22px" }}>Një platformë komuniteti ku gjërat e papërdorura gjejnë shtëpi të re. Jep pak, merr atë që të duhet - pa para në mes.</p>
               <div style={{ display: "flex", gap: "10px", flexWrap: "wrap" }}>
@@ -44,6 +44,10 @@ export default function Home() {
                 <button onClick={() => setPage("kerko")} style={{ background: "transparent", color: "white", border: "1px solid white", padding: "12px 22px", borderRadius: "30px", cursor: "pointer", fontWeight: "bold", fontSize: "14px" }}>Browse Items</button>
               </div>
             </div>
+            {/* Dekorim i lehtë në djathtë, mbi jeshilen natyrale */}
+            <div style={{ position: "absolute", right: "20px", bottom: "20px", fontSize: "110px", opacity: 0.35 }}>🧺</div>
+            <div style={{ position: "absolute", right: "110px", top: "30px", fontSize: "50px", opacity: 0.4 }}>💐</div>
+            <div style={{ position: "absolute", right: "180px", bottom: "60px", fontSize: "40px", opacity: 0.35 }}>🌷</div>
           </div>
 
           <div style={{ maxWidth: "1150px", margin: "20px auto 0", display: "flex", gap: "14px", flexWrap: "wrap" }}>
