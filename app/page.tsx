@@ -83,12 +83,11 @@ export default function Home() {
                 <button onClick={() => document.getElementById('recent')?.scrollIntoView({ behavior: 'smooth' })} style={{ background: 'transparent', color: 'white', border: '1.5px solid white', borderRadius: 999, padding: '12px 18px', fontWeight: 700, cursor: 'pointer' }}>Browse Items</button>
               </div>
             </div>
-            <div style={{ flex: 1 }}>
-              <img src="/shporta.jpg.jpeg" alt="Shporta DHURO" style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
-            </div>
-          </div>
-
-          {/* 3 KARTAT */}
+           <div style={{ display: 'flex', gap: '16px' }}>
+  <div style={{ flex: 1 }}>
+    <img src="/shporta.jpg.jpeg" alt="Shporta DHURO" style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
+  </div>
+</div>
           <div style={{ display: 'flex', gap: 12, margin: '14px 16px 0' }}>
             <div onClick={() => setTab('humanitare')} style={{ flex: 1, background: 'white', borderRadius: 16, padding: 18, cursor: 'pointer' }}>
               <div style={{ background: '#FFF3D6', width: 36, height: 36, borderRadius: 10, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>🤝</div>
