@@ -79,8 +79,11 @@ export default function Home() {
               <p style={{ fontSize: 20, margin: '14px 0 6px', fontWeight: 600 }}>Mirësevjen te DHURO</p>
               <p style={{ fontSize: 14, lineHeight: 1.6, opacity: 0.9, maxWidth: 380, margin: 0 }}>Një platformë komuniteti ku gjërat e papërdorura gjejnë shtëpi të re.<br />Jep pak, merr atë që të duhet - pa para në mes.</p>
               <div style={{ display: 'flex', gap: 10, marginTop: 24 }}>
-                <button onClick={() => setShowModal(true)} style={{ background: '#FDF8EE', color: '#111', border: 'none', borderRadius: 999, padding: '12px 18px', fontWeight: 700, cursor: 'pointer' }}>Start Exchanging</button>
-                <button onClick={() => document.getElementById('recent')?.scrollIntoView({ behavior: 'smooth' })} style={{ background: 'transparent', color: 'white', border: '1.5px solid white', borderRadius: 999, padding: '12px 18px', fontWeight: 700, cursor: 'pointer' }}>Browse Items</button>
+<div style={{ display: 'flex', gap: 10, marginTop: 24 }}>
+  {['Të gjitha','Freshër','Rroba','Lodra / Fëmijë','Mobilje / Shtëpi','Elektronikë'].map(t => (
+    <button key={t} style={{ padding: '8px 16px', borderRadius: 999, border: '1px solid #fff', background: t === 'Të gjitha' ? '#fff' : 'transparent', color: t === 'Të gjitha' ? '#000' : '#fff', fontWeight: '600', cursor: 'pointer' }}>{t}</button>
+  ))}
+</div>
               </div>
             </div>
            <div style={{ display: 'flex', gap: '16px' }}>
