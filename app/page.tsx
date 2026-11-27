@@ -84,7 +84,7 @@ export default function Home() {
               </div>
             </div>
             <div style={{ flex: 1 }}>
-              <img src="/shporta.jpg.jpeg" alt="Shporta DHURO" style={{ width: '100%', height: '100%',
+              <img src="/shporta.jpg.jpeg" alt="Shporta DHURO" style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
             </div>
           </div>
 
