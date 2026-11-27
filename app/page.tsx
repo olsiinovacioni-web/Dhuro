@@ -1,101 +1,122 @@
-export default function Home() {
-  return (
-    <div style={{ fontFamily: "system-ui, sans-serif", background: "#F7F7F2", minHeight: "100vh", color: "#1E3A2B" }}>
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dhuro - Jep falas, merr falas</title>
+<style>
+  *{box-sizing:border-box;font-family:system-ui,-apple-system,sans-serif}
+  body{margin:0;background:#F8F7F4;color:#1A1A1A;padding-bottom:90px}
+  header{background:#0F8A5F;color:white;padding:18px 16px;position:sticky;top:0;z-index:10}
+  header h1{margin:0;font-size:24px} header p{margin:4px 0 0;opacity:.9;font-size:14px}
+  .container{max-width:520px;margin:0 auto;padding:14px}
+  .filters{display:flex;gap:8px;overflow-x:auto;padding:4px 0 12px;scrollbar-width:none}
+  .filters button{white-space:nowrap;border:1.5px solid #E5E0D8;background:white;padding:8px 14px;border-radius:999px;font-weight:600;cursor:pointer}
+  .filters button.active{background:#0F8A5F;color:white;border-color:#0F8A5F}
+  select,input,textarea{width:100%;padding:12px;border:1.5px solid #E5E0D8;border-radius:12px;margin-bottom:10px;font-size:15px;background:white}
+  .card{background:white;border-radius:16px;overflow:hidden;margin-bottom:14px;box-shadow:0 2px 12px rgba(0,0,0,.06)}
+  .card img{width:100%;height:220px;object-fit:cover;background:#eee;display:block}
+  .card-body{padding:14px}
+  .badge{display:inline-block;background:#E6F7EF;color:#0F8A5F;padding:4px 10px;border-radius:999px;font-size:12px;font-weight:700}
+  .badge.lagjia{background:#FFF3D6;color:#8A6D00;margin-left:6px}
+  .card h3{margin:10px 0 4px;font-size:18px}
+  .card p{margin:0;color:#666;font-size:14px}
+  .actions{display:flex;gap:8px;margin-top:12px}
+  .actions button{flex:1;padding:12px;border-radius:12px;border:0;font-weight:700;cursor:pointer;font-size:15px}
+  .btn-dua{background:#0F8A5F;color:white}
+  .btn-mor{background:#F0F0F0;color:#333}
+  .btn-rezervuar{background:#FFC107;color:#333}
+  .fab{position:fixed;bottom:18px;left:50%;transform:translateX(-50%);background:#0F8A5F;color:white;border:0;padding:16px 24px;border-radius:999px;font-size:16px;font-weight:800;box-shadow:0 8px 24px rgba(15,138,95,.4);cursor:pointer;z-index:20}
+  .modal{display:none;position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:30;align-items:flex-end;justify-content:center}
+  .modal.open{display:flex}
+  .modal-box{background:white;width:100%;max-width:520px;border-radius:20px 20px 0 0;padding:20px;max-height:90vh;overflow:auto}
+  .empty{text-align:center;padding:40px 10px;color:#888}
+</style>
+</head>
+<body>
 
-      {/* ===== HEADER - SI NE FOTO ===== */}
-      <header style={{ background: "white", padding: "14px 20px", display: "flex", justifyContent: "space-between", alignItems: "center", position: "sticky", top: 0, zIndex: 50, borderBottom: "1px solid #eee" }}>
-        <div style={{ display: "flex", alignItems: "center", gap: "8px", fontWeight: "900", fontSize: "20px", letterSpacing: "1px" }}>
-          <span style={{ background: "#8A9E84", color: "white", width: "32px", height: "32px", borderRadius: "8px", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "18px" }}>⇄</span>
-          DHURO
-        </div>
-        <nav style={{ display: "flex", gap: "18px", fontSize: "14px", fontWeight: "600", color: "#444" }}>
-          <span style={{ color: "#1E3A2B" }}>Home</span>
-          <span>Dhuro</span>
-          <span>Humanitare</span>
-          <span>Kërko</span>
-        </nav>
-        <div style={{ display: "flex", gap: "14px", alignItems: "center", fontSize: "19px" }}>
-          <span>♡</span>
-          <span>🔔</span>
-          <span>👤</span>
-          <span style={{ background: "#8A9E84", color: "white", padding: "7px 14px", borderRadius: "999px", fontSize: "14px", fontWeight: "700" }}>+ Shto</span>
-        </div>
-      </header>
+<header><h1>🎁 Dhuro</h1><p>Jep falas. Merr falas. Në lagjen tënde.</p></header>
 
-      {/* ===== HERO - SHporta Prapa, Shkrimi Majtas - SI NE FOTO ===== */}
-      <section style={{ position: "relative", height: "520px", overflow: "hidden", background: "#1E3A2B" }}>
-        {/* FOTOJA E SHportes */}
-        <img
-          src="https://images.unsplash.com/photo-1597484661643-2f5fef640dd1?w=1600&q=80"
-          alt="Shporta DHURO"
-          style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%", objectFit: "cover" }}
-        />
-        {/* HIJA E GJELBER SIPER FOTOS PER TE LEXUAR SHKRIMI */}
-        <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to right, rgba(120,146,125,0.45) 0%, rgba(120,146,125,0.30) 50%, rgba(120,146,125,0.15) 100%)" }}>
-          
-        
-        <div style={{ position: "relative", zIndex: 2, height: "100%", display: "flex", flexDirection: "column", justifyContent: "center", padding: "0 24px", maxWidth: "900px" }}>
-          <h1 style={{ fontSize: "44px", lineHeight: "1.1", fontWeight: "900", color: "white", margin: "0 0 14px", maxWidth: "520px" }}>
-            Mirësevini te DHURO
-          </h1>
-          <p style={{ fontSize: "17px", lineHeight: "1.6", color: "white", opacity: 0.95, margin: "0 0 26px", maxWidth: "480px" }}>
-            Jep atë që nuk të duhet. Merr atë që të duhet.
-          </p>
-          <div style={{ display: "flex", gap: "12px", flexWrap: "wrap" }}>
-            <a href="/browse" style={{ background: "white", color: "#1E3A2B", padding: "13px 22px", borderRadius: "999px", fontWeight: "800", fontSize: "15px", textDecoration: "none" }}>
-              Fillo Shkëmbimin
-            </a>
-            <a href="/browse" style={{ background: "rgba(255,255,255,0.22)", color: "white", padding: "13px 22px", borderRadius: "999px", fontWeight: "800", fontSize: "15px", textDecoration: "none", border: "1px solid rgba(255,255,255,0.6)" }}>
-              Shiko Sendet
-            </a>
-          </div>
-        </div>
-      </section>
+<div class="container">
+  <select id="filterLagjia" onchange="render()">
+    <option value="Të gjitha">📍 Të gjitha lagjet - Tiranë</option>
+    <option>Kombinat</option><option>Astir</option><option>Fresku</option>
+    <option>Blloku</option><option>Yzberisht</option><option>Kamëz</option>
+    <option>Don Bosko</option><option>Sauk</option><option>Porcelan</option>
+  </select>
 
-      {/* ===== POSHTE HERO - SI ISHTE ===== */}
-      <main style={{ maxWidth: "900px", margin: "0 auto", padding: "20px 14px 40px" }}>
+  <div class="filters" id="cats"></div>
+  <div id="list"></div>
+</div>
 
-        <div style={{ background: "white", borderRadius: "20px", padding: "20px", boxShadow: "0 2px 12px rgba(0,0,0,0.05)" }}>
-          <h3 style={{ margin: "0", fontSize: "18px" }}>🤲 Duart që Ndihmojnë</h3>
-          <p style={{ color: "#666", fontSize: "14px", lineHeight: "1.6", margin: "8px 0" }}>
-            Jep, merr dhe ndihmo komunitetin të rritet së bashku. Çdo send i dhuruar është një buzëqeshje e re.
-          </p>
-          <span style={{ color: "#5B735F", fontWeight: "700", fontSize: "14px" }}>Mëso Më Shumë →</span>
-        </div>
+<button class="fab" onclick="openModal()">+ Dhuro diçka</button>
 
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "14px", marginTop: "14px" }}>
-          <div style={{ background: "white", borderRadius: "20px", padding: "18px" }}>
-            <span style={{ fontSize: "26px" }}>🌱</span>
-            <h4 style={{ margin: "10px 0 4px" }}>Më Pak Mbeturina</h4>
-            <p style={{ margin: 0, fontSize: "13px", color: "#666", lineHeight: "1.5" }}>Jepi jetë të dytë sendeve të tua të papërdorura.</p>
-          </div>
-          <div style={{ background: "white", borderRadius: "20px", padding: "18px" }}>
-            <span style={{ fontSize: "26px" }}>👥</span>
-            <h4 style={{ margin: "10px 0 4px" }}>Komunitet i Fortë</h4>
-            <p style={{ margin: 0, fontSize: "13px", color: "#666", lineHeight: "1.5" }}>Njihe fqinjin tënd dhe ndërto besim.</p>
-          </div>
-        </div>
+<div class="modal" id="modal">
+  <div class="modal-box">
+    <h2 style="margin:0 0 12px">Dhuro diçka në 30 sekonda</h2>
+    <input id="titulli" placeholder="P.sh: Divan për fëmijë">
+    <select id="kategoria">
+      <option>Rroba</option><option>Lodra / Fëmijë</option>
+      <option>Mobilje / Shtëpi</option><option>Elektronikë</option>
+      <option>Libra / Shkollë</option><option>Të tjera</option>
+    </select>
+    <select id="lagjia">
+      <option>Kombinat</option><option>Astir</option><option>Fresku</option>
+      <option>Blloku</option><option>Yzberisht</option><option>Kamëz</option>
+      <option>Don Bosko</option><option>Sauk</option><option>Porcelan</option>
+    </select>
+    <input id="foto" placeholder="Link foto (opsionale) ose lëre bosh">
+    <textarea id="pershkrimi" rows="2" placeholder="Përshkrim i shkurtër..."></textarea>
+    <button onclick="shto()" style="width:100%;padding:14px;background:#0F8A5F;color:white;border:0;border-radius:12px;font-weight:800;font-size:16px">PUBLIKO FALAS →</button>
+    <button onclick="closeModal()" style="width:100%;padding:12px;background:none;border:0;margin-top:6px;color:#888">Mbyll</button>
+  </div>
+</div>
 
-        <div style={{ background: "white", borderRadius: "20px", padding: "22px", marginTop: "16px" }}>
-          <h3 style={{ margin: "0 0 14px", fontSize: "20px" }}>Si Funksionon?</h3>
-          <p style={{ margin: "10px 0", fontSize: "14px" }}><b>1. Listo Sendin</b><br /><span style={{ color: "#666" }}>Fotografo dhe ngarko atë që nuk të duhet.</span></p>
-          <p style={{ margin: "10px 0", fontSize: "14px" }}><b>2. Lidhu me Fqinjin</b><br /><span style={{ color: "#666" }}>Gjej dikë pranë teje që ka nevojë për të.</span></p>
-          <p style={{ margin: "10px 0", fontSize: "14px" }}><b>3. Shkëmbe & Gëzohu</b><br /><span style={{ color: "#666" }}>Takohuni, shkëmbeni dhe buzëqeshni.</span></p>
-        </div>
-
-        <div style={{ background: "#2F3D33", borderRadius: "24px", padding: "28px 20px", marginTop: "16px", color: "white", textAlign: "center" }}>
-          <h3 style={{ margin: "0", fontSize: "22px" }}>Gati të Fillosh?</h3>
-          <p style={{ fontSize: "14px", opacity: 0.85, margin: "10px 0 18px" }}>Bashkohu me qindra fqinjë që shkëmbejnë çdo ditë.</p>
-          <a href="/browse" style={{ background: "white", color: "#2F3D33", padding: "12px 22px", borderRadius: "999px", fontWeight: "800", textDecoration: "none", display: "inline-block" }}>Shiko Sendet Tani</a>
-        </div>
-
-        <footer style={{ marginTop: "30px", color: "#666", fontSize: "14px" }}>
-          <b style={{ color: "#2F3D33", fontSize: "18px" }}>DHURO</b>
-          <p style={{ lineHeight: "1.6" }}>Ndërto komunitetin duke shkëmbyer atë që nuk të duhet me atë që të duhet.</p>
-          <p style={{ textAlign: "center", fontSize: "12px", marginTop: "20px" }}>© 2026 DHURO. Të gjitha të drejtat e rezervuara.</p>
-        </footer>
-
-      </main>
-    </div>
-  );
+<script>
+let cats = ["Të gjitha","Rroba","Lodra / Fëmijë","Mobilje / Shtëpi","Elektronikë","Libra / Shkollë","Të tjera"];
+let activeCat = "Të gjitha";
+let dhuratat = JSON.parse(localStorage.getItem('dhuro') || '[]');
+if(dhuratat.length===0){
+  dhuratat = [
+    {id:1,titulli:"Rroba dimri për fëmijë 6-8 vjeç",kat:"Rroba",lagjia:"Kombinat",foto:"https://images.unsplash.com/photo-1522771930-78848d9293e8?w=800&q=80",desc:"Të pastra, shumë pak të veshura.",status:"e lirë"},
+    {id:2,titulli:"Divan i vogël - si i ri",kat:"Mobilje / Shtëpi",lagjia:"Astir",foto:"https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=800&q=80",desc:"Duhet marrë deri të premten.",status:"e lirë"},
+    {id:3,titulli:"Lodra + libra për klasën e 1-rë",kat:"Libra / Shkollë",lagjia:"Fresku",foto:"https://images.unsplash.com/photo-1516627145497-ae6968895b74?w=800&q=80",desc:"Të kompletuara.",status:"e lirë"}
+  ];
+  save();
 }
+function save(){ localStorage.setItem('dhuro', JSON.stringify(dhuratat)); }
+function renderCats(){
+  document.getElementById('cats').innerHTML = cats.map(c=>`<button class="${c===activeCat?'active':''}" onclick="activeCat='${c}';render()">${c}</button>`).join('');
+}
+function render(){
+  renderCats();
+  let lagjia = document.getElementById('filterLagjia').value;
+  let list = dhuratat.filter(d=> (activeCat==="Të gjitha"||d.kat===activeCat) && (lagjia==="Të gjitha"||d.lagjia===lagjia) && d.status!=="e marrë");
+  document.getElementById('list').innerHTML = list.length ? list.map(d=>`
+    <div class="card">
+      <img src="${d.foto || 'https://images.unsplash.com/photo-1557928557-6b5c1d3d8b9a?w=800&q=80'}" onerror="this.src='https://images.unsplash.com/photo-1557928557-6b5c1d3d8b9a?w=800&q=80'">
+      <div class="card-body">
+        <span class="badge">${d.kat}</span><span class="badge lagjia">📍 ${d.lagjia}</span>
+        <h3>${d.titulli}</h3><p>${d.desc||''}</p>
+        <div class="actions">
+          <button class="btn-dua ${d.status==='e rezervuar'?'btn-rezervuar':''}" onclick="rezervo(${d.id})">${d.status==='e rezervuar'?'✅ E rezervuar':'❤️ E dua'}</button>
+          <button class="btn-mor" onclick="uMor(${d.id})">U mor</button>
+        </div>
+      </div>
+    </div>`).join('') : `<div class="empty"><h3>Asnjë dhuratë këtu akoma 😢</h3><p>Ji i pari që dhuron në këtë lagje!</p></div>`;
+}
+function openModal(){ document.getElementById('modal').classList.add('open'); }
+function closeModal(){ document.getElementById('modal').classList.remove('open'); }
+function shto(){
+  let t=document.getElementById('titulli').value.trim();
+  if(!t) return alert('Shkruaj titullin!');
+  dhuratat.unshift({id:Date.now(),titulli:t,kat:document.getElementById('kategoria').value,lagjia:document.getElementById('lagjia').value,foto:document.getElementById('foto').value,desc:document.getElementById('pershkrimi').value,status:"e lirë"});
+  save(); closeModal(); render();
+  document.getElementById('titulli').value=''; document.getElementById('pershkrimi').value='';
+}
+function rezervo(id){ let d=dhuratat.find(x=>x.id===id); d.status = d.status==='e rezervuar' ? 'e lirë' : 'e rezervuar'; save(); render(); }
+function uMor(id){ if(confirm('U mor vërtet?')){ let d=dhuratat.find(x=>x.id===id); d.status='e marrë'; save(); render(); } }
+render();
+</script>
+</body>
+</html>
