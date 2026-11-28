@@ -1,39 +1,38 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
 
 export const metadata: Metadata = {
   title: "Dhuro",
-  description: "Dhuro - Ndihmo të tjerët",
+  description: "Dhuro - Ndihmo boten me zemer",
   manifest: "/manifest.json",
   icons: {
-    icon: [
-      { url: "/icon-192.png.jpeg", sizes: "192x192", type: "image/jpeg" },
-      { url: "/icon-512.png.jpeg", sizes: "512x512", type: "image/jpeg" },
-    ],
-    apple: [
-      { url: "/apple-touch-icon.png.jpeg", sizes: "180x180", type: "image/jpeg" },
-    ],
+    icon: "/apple-touch-icon.png.jpeg",
+    shortcut: "/apple-touch-icon.png.jpeg",
+    apple: "/apple-touch-icon.png.jpeg",
+  },
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: "default",
+    title: "Dhuro",
   },
 };
 
-export default function RootLayout({ children }: LayoutProps<"/">) {
+export const viewport = {
+  themeColor: "#16a34a",
+};
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
-    <html
-      lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
-    >
-      <body className="min-h-full flex flex-col">{children}</body>
+    <html lang="sq">
+      <head>
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png.jpeg" />
+        <link rel="icon" href="/apple-touch-icon.png.jpeg" />
+      </head>
+      <body>{children}</body>
     </html>
   );
 }
