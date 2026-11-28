@@ -6,9 +6,9 @@ export const metadata: Metadata = {
   description: "Dhuro - Ndihmo boten me zemer",
   manifest: "/manifest.json",
   icons: {
-    icon: "/apple-touch-icon.png.jpeg",
-    shortcut: "/apple-touch-icon.png.jpeg",
-    apple: "/apple-touch-icon.png.jpeg",
+icon: "/apple-touch-icon.png.jpeg?v=999",
+shortcut: "/apple-touch-icon.png.jpeg?v=999",
+apple: "/apple-touch-icon.png.jpeg?v=999",
   },
   appleWebApp: {
     capable: true,
